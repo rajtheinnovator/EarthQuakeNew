@@ -25,12 +25,6 @@ import static com.example.android.earthquakenew.EarthquakeActivity.LOG_TAG;
  * Helper methods related to requesting and receiving earthquake data from USGS.
  */
 public final class QueryUtils {
-
-    /**
-     * Sample JSON response for a USGS query
-     */
-    private static final String SAMPLE_JSON_RESPONSE = "";
-
     /**
      * Create a private constructor because no one should ever create a {@link QueryUtils} object.
      * This class is only meant to hold static variables and methods, which can be accessed
@@ -81,8 +75,10 @@ public final class QueryUtils {
             urlConnection.setRequestMethod("GET");
             urlConnection.connect();
 
-            // If the request was successful (response code 200),
-            // then read the input stream and parse the response.
+            /*
+            If the request was successful (response code 200),
+            then read the input stream and parse the response.
+            */
             if (urlConnection.getResponseCode() == 200) {
                 inputStream = urlConnection.getInputStream();
                 jsonResponse = readFromStream(inputStream);
