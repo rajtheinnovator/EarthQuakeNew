@@ -3,8 +3,6 @@ package com.example.android.earthquakenew;
 import android.content.AsyncTaskLoader;
 import android.content.Context;
 import android.util.Log;
-
-import java.util.ArrayList;
 import java.util.List;
 
 /**

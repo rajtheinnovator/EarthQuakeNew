@@ -14,10 +14,8 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.Charset;
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-import static android.R.string.no;
 import static com.example.android.earthquakenew.EarthquakeActivity.LOG_TAG;
 
 

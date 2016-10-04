@@ -19,6 +19,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+
 import java.util.ArrayList;
 
 public class EarthquakeActivity extends AppCompatActivity implements LoaderCallbacks<ArrayList<Earthquake>> {
@@ -54,8 +55,8 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
             fetch data
             Get a reference to the LoaderManager, in order to interact with loaders.
             And, Initialize the loader. Pass in the int ID constant defined above and pass in null for
-        the bundle. Pass in this activity for the LoaderCallbacks parameter (which is valid
-        because this activity implements the LoaderCallbacks interface).
+            the bundle. Pass in this activity for the LoaderCallbacks parameter (which is valid
+            because this activity implements the LoaderCallbacks interface).
         */
             LoaderManager loaderManager = getLoaderManager();
             loaderManager.initLoader(EARTHQUAKE_LOADER_ID, null, this);
@@ -142,8 +143,8 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 Earthquake earthquake = earthquakes.get(position);
-                Intent goToUrl = new Intent(Intent.ACTION_VIEW);
-                goToUrl.setData(Uri.parse(earthquake.getUrl()));
+                Intent goToUrl = new Intent(Intent.ACTION_VIEW, Uri.parse(earthquake.getUrl()));
+                //goToUrl.setData(Uri.parse(earthquake.getUrl()));
                 startActivity(goToUrl);
             }
         });
